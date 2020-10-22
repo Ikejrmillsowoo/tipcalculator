@@ -6,11 +6,11 @@ function finalBill() {
     
     function tipPercent() {
         let newTip;
-        if (service === "great") {
+        if (service === "great-20%") {
             newTip = 0.20;
-        } else if (service === "ok") {
+        } else if (service === "ok-18%") {
             newTip = 0.18;
-        } else if (service === "bad") {
+        } else if (service === "bad-14%") {
             newTip = 0.14;
         } else {
             newTip = 0.10;
