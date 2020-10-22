@@ -15,7 +15,9 @@ function tipPercent() {
         newTip = 0.18;
     } else if (service === "bad-14%") {
         newTip = 0.14;
-    } else {
+    } else if (service === "no tip") {
+        newTip = 0;
+    }    else {
         newTip = 0.10;
     }
     return(newTip);
