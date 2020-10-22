@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <main>
+        <div>
+            <h1>Tip Calculator</h1>
+        </div>
+        <section class="labels">
+            <label for="bill">How much was your bill?</label><br>
+            <input type="number" id="bill" placeholders="Bill Amount" class="inputs">
+
+        </section>
+        <section class="labels">
+            <label for="service" >How was the service? </label> <br>
+            <input type="text" id="service" list="services" placeholder="how was service?" class="inputs">
+            <datalist id="services">
+                <option value="great-20%">
+                <option value="ok-18%">
+                <option value="bad -14%">
+                <option value="worst-10%">
+            </datalist>
+        </section>
+        <section class="labels">
+            <h3>How many people are sharing the bill?</h3>
+            <input type="number" id="splitNumber" class="inputs">
+        </section>
+        <div>
+            <button class="calculate" id="fullTip" onclick="tipTot()">Total Tip</button>
+            <button class="calculate" id="fullBill" onclick="finalBill()">Total Bill</button>
+            <button class="calculate" id="calculate" onclick="tipCalc()">Total Per Person</button>
+            <h3 id="result"></h3>
+        </div>
+    </main>
+
+
+
+
+    <script src="JS/script.js" defer></script>
+    <script src="JS/tip.js" defer></script>
+    <script src="JS/final.js" defer></script>
+</body>
+</html>
