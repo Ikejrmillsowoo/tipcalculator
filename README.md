@@ -1,2 +1,3 @@
 # tipcalculator
-presents a calculatory with predertermined tip percentage based on service received. 
+presents a calculator with predetermined tip percentages based on service received.
+ 

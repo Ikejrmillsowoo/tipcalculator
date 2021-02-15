@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <title>Tip Calculator</title>
     <link rel="stylesheet" href="./CSS/style.css">
+    <!-- endbuild -->
+    <title>Tip Calculator</title>
+    
 </head>
 
 <body>
-<header>
+    <header>
         <div class="container">
             <div class="row text-center">
                 <div class="col">
@@ -18,64 +21,68 @@
                 </div>
             </div>
         </div>
+
     </header>
-        <section id="labels" class="container mt-5 text-white">
-            <form >
-                <div class="row form-group mx-auto">
-                    <label for="bill" class="form-check-label col-12 col-md-6">How much was your bill?</label><br>
-                    <input type="number" id="bill" placeholders="Bill Amount" class="form-control col mt-2">
-                </div>
+    <section id="labels" class="container mt-5 text-white">
+        <form>
+            <div class="row form-group mx-auto">
+                <label for="bill" class="form-check-label col-12 col-md-6">How much was your bill?</label><br>
+                <input type="number" id="bill" placeholders="Bill Amount" class="form-control col mt-2">
+            </div>
 
-                <div class="row form-group mx-auto">
-                    <label for="service" class="form-check-label col-12 col-md-6">How was the service? </label> <br>
-                    <input type="text" id="service" list="services" placeholder="how was service?"
-                        class="form-control col mt-2">
-                    <datalist id="services">
-                        <option value="great-20%">
-                        <option value="ok-18%">
-                        <option value="bad-14%">
-                        <option value="worst-10%">
-                        <option value="no tip">
-                    </datalist>
-                </div>
-                <div class="row form-group mx-auto">
+            <div class="row form-group mx-auto">
+                <label for="service" class="form-check-label col-12 col-md-6">How was the service? </label> <br>
+                <input type="text" id="service" list="services" placeholder="how was service?"
+                    class="form-control col mt-2">
+                <datalist id="services">
+                    <option value="great-20%">
+                    <option value="ok-18%">
+                    <option value="bad-14%">
+                    <option value="worst-10%">
+                    <option value="no tip">
+                </datalist>
+            </div>
+            <div class="row form-group mx-auto">
 
-                    <label class="form-check-label col-12 col-md-6" for="splitNumber">How many people are sharing the bill?</label>
-                    <input type="number" id="splitNumber" class="form-control col mt-2">
-                </div>
-            </form>
-        </section>
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 col-md-4 mb-3 ">
-            <a type="button" class="btn btn-danger" id="fullTip" onclick="tipTot()">Total Tip</a>
-        </div>
-        <div class="col-12 col-md-4 mb-3">
-            <a type="button" class="btn btn-primary calculate" id="fullBill" onclick="finalBill()">Total Bill</a>
-        </div>
-        <div class="col-12 col-md-4">
-            <a type="button" class="btn btn-success calculate" id="calculate" onclick="tipCalc()">Total Per Person</a>
-        </div>
+                <label class="form-check-label col-12 col-md-6" for="splitNumber">How many people are sharing the
+                    bill?</label>
+                <input type="number" id="splitNumber" class="form-control col mt-2">
+            </div>
+        </form>
+    </section>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 col-md-4 mb-3 ">
+                <a type="button" class="btn btn-danger" id="fullTip" onclick="tipTot()">Total Tip</a>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <a type="button" class="btn btn-primary calculate" id="fullBill" onclick="finalBill()">Total Bill</a>
+            </div>
+            <div class="col-12 col-md-4">
+                <a type="button" class="btn btn-success calculate" id="calculate" onclick="tipCalc()">Total Per
+                    Person</a>
+            </div>
         </div>
         <div class="row">
             <div class="col">
                 <h3 class="text-center" id="result"></h3>
             </div>
         </div>
-            
-        </div>
-   
+
+    </div>
 
 
 
 
-    <script src="./node_modules/popper.js/dist/popper.min.js"></script>
+    <!-- build:js js/main.js -->
     <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- endbuild -->
 
-    <script src="JS/script.js" defer></script>
-    <script src="JS/tip.js" defer></script>
-    <script src="JS/final.js" defer></script>
+    <script src="./JS/script.js"></script>
+    <script src="./JS/tip.js"></script>
+    <script src="./JS/final.js"></script>
 
 </body>
 
