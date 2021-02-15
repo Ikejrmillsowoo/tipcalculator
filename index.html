@@ -1,49 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
+
 <body>
-    <main>
-        <div>
-            <h1>Tip Calculator</h1>
+<header>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <h1>Tip Calculator</h1>
+                </div>
+            </div>
         </div>
-        <section class="labels">
-            <label for="bill">How much was your bill?</label><br>
-            <input type="number" id="bill" placeholders="Bill Amount" class="inputs">
+    </header>
+        <section id="labels" class="mt-5 text-white">
+            <form >
+                <div class="row form-group mx-auto">
+                    <label for="bill" class="form-check-label col-12 col-md-6">How much was your bill?</label><br>
+                    <input type="number" id="bill" placeholders="Bill Amount" class="form-control col mt-2">
+                </div>
 
-        </section>
-        <section class="labels">
-            <label for="service" >How was the service? </label> <br>
-            <input type="text" id="service" list="services" placeholder="how was service?" class="inputs">
-            <datalist id="services">
-                <option value="great-20%">
-                <option value="ok-18%">
-                <option value="bad-14%">
-                <option value="worst-10%">
-                <option value="no tip">
-            </datalist>
-        </section>
-        <section class="labels">
-            <h3>How many people are sharing the bill?</h3>
-            <input type="number" id="splitNumber" class="inputs">
+                <div class="row form-group mx-auto">
+                    <label for="service" class="form-check-label col-12 col-md-6">How was the service? </label> <br>
+                    <input type="text" id="service" list="services" placeholder="how was service?"
+                        class="form-control col mt-2">
+                    <datalist id="services">
+                        <option value="great-20%">
+                        <option value="ok-18%">
+                        <option value="bad-14%">
+                        <option value="worst-10%">
+                        <option value="no tip">
+                    </datalist>
+                </div>
+                <div class="row form-group mx-auto">
+
+                    <label class="form-check-label col-12 col-md-6" for="splitNumber">How many people are sharing the bill?</label>
+                    <input type="number" id="splitNumber" class="form-control col mt-2">
+                </div>
+            </form>
         </section>
         <div>
-            <button class="calculate" id="fullTip" onclick="tipTot()">Total Tip</button>
-            <button class="calculate" id="fullBill" onclick="finalBill()">Total Bill</button>
-            <button class="calculate" id="calculate" onclick="tipCalc()">Total Per Person</button>
-            <h3 id="result"></h3>
+            <div class="row mb-5">
+                <div class="col-12 col-md-4 mb-3 ">
+            <a type="button" class="btn btn-danger" id="fullTip" onclick="tipTot()">Total Tip</a>
         </div>
-    </main>
+        <div class="col-12 col-md-4 mb-3">
+            <a type="button" class="btn btn-primary calculate" id="fullBill" onclick="finalBill()">Total Bill</a>
+        </div>
+        <div class="col-12 col-md-4">
+            <a type="button" class="btn btn-success calculate" id="calculate" onclick="tipCalc()">Total Per Person</a>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3 class="text-center" id="result"></h3>
+            </div>
+        </div>
+            
+        </div>
+   
 
 
 
+
+    <script src="./node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script src="JS/script.js" defer></script>
     <script src="JS/tip.js" defer></script>
     <script src="JS/final.js" defer></script>
+
 </body>
+
 </html>

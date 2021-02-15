@@ -2,41 +2,32 @@ body {
     background-color: black;
     margin: auto;
     width: 100%;
-}
-main {
-    width: 60%;
-    margin: auto;
-    background-color: gray;
-    text-align: center;
-    border-radius: 5px;
+    height: auto;
+    padding: 40px;
 }
 
-h1 {
+
+
+.container h1 {
     background-color: bisque;
     text-transform: uppercase;
     border: solid 3px rgb(80, 5, 5);
     border-radius: 5px;
 }
 
-.labels {
+/* .labels {
     padding: 15px;
     font-weight: bold;
-}
+} */
 
-.inputs {
+/* .inputs {
     margin: 10px;
     border: 2px black solid;
     border-radius: 2px;
     font-size: 15px;
-}
+} */
 
-.calculate {
-    margin: 10px;
-    padding: 5;
-    background-color: red;
-    font-size: larger;
-    cursor: pointer;
-}
+
 
 #result {
     
